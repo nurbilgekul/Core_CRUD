@@ -75,5 +75,12 @@ namespace Core_CRUD.Controllers
                 return View(model);
         }
 
+        public IActionResult Details (int id)
+        {
+            Category category = _repo.FirstByDefault(x => x.Id == id);
+            return View(category);
+
+        }
+
     }
 }
